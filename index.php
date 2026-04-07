@@ -1,7 +1,5 @@
 <?php
-$lpsRead = file_get_contents('./lps.json');
-
-$lps = json_decode($lpsRead, true);
+require_once "./functions.php";
 
 ?>
 
@@ -60,15 +58,15 @@ $lps = json_decode($lpsRead, true);
 
 
 
-            <!-- DUPLICA CARD PER ALTRI DISCHI -->
+            
 
         </div>
 
-        <!-- FORM AGGIUNTA -->
+        
         <div class="mt-5">
             <h2 class="mb-4">Aggiungi un nuovo disco</h2>
 
-            <form method="POST">
+            <form action="server.php" method="POST">
 
                 <div class="row g-3">
 
@@ -79,22 +77,22 @@ $lps = json_decode($lpsRead, true);
 
                     <div class="col-md-6">
                         <label class="form-label">Artista</label>
-                        <input type="text" name="artista" class="form-control">
+                        <input type="text" id="artista" name="artista" class="form-control">
                     </div>
 
                     <div class="col-md-6">
                         <label class="form-label">URL Cover</label>
-                        <input type="text" name="cover" class="form-control">
+                        <input type="text" id="cover" name="cover" class="form-control">
                     </div>
 
                     <div class="col-md-3">
                         <label class="form-label">Anno</label>
-                        <input type="number" name="anno" class="form-control">
+                        <input type="number" id="anno" name="anno" class="form-control">
                     </div>
 
                     <div class="col-md-3">
                         <label class="form-label">Genere</label>
-                        <input type="text" name="genere" class="form-control">
+                        <input type="text" id="genere" name="genere" class="form-control">
                     </div>
 
                 </div>
